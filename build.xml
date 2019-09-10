@@ -1,7 +1,7 @@
 <?xml version = "1.0"?>
 <project name = "Hello World Project" default = "info">
 <!-- set global properties for this build -->
-  <property name="src" location="src"/>
+  
   <property name="build" location="build"/>
   <property name="dist" location="dist"/>
 
@@ -16,6 +16,6 @@
   <target name="compile" depends="init"
         description="compile the source">
     <!-- Compile the Java code from ${src} into ${build} -->
-    <javac srcdir="${src}" destdir="${build}"/>
+    <javac *.java destdir="${build}"/>
   </target>
 </project>
