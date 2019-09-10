@@ -13,12 +13,11 @@
 <mkdir dir="${src}"/>
   </target>
   
-  <target name="move" dependes "init">
+  <target name="move" depends = "init">
 <move file="*.java" todir="${src}" />
 </target>
  
-  <target name="compile" depends="init"
-        description="compile the source">
+  <target name="compile" depends="init" description="compile the source">
     <!-- Compile the Java code from ${src} into ${build} -->
     <javac = "${src}" destdir="${build}"/>
   </target>
