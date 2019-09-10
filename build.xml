@@ -1,9 +1,23 @@
 <?xml version = "1.0"?>
 <project name = "Hello World Project" default = "info">
-   <target name = "info">
-      <echo>Hello World - Welcome to Apache Ant!</echo>
-   </target>
-    <target name = "compile">
-    <javac Hello.java>
-    </target>
+<!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="dist" location="dist"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+<mkdir dir="${src}"/>
+  </target>
+ <target name="move" dependes "init">
+<mv *.java ${src}>
+</target>
+  <target name="compile" depends="init"
+        description="compile the source">
+    <!-- Compile the Java code from ${src} into ${build} -->
+    <javac srcdir="${src}" destdir="${build}"/>
+  </target>
 </project>
