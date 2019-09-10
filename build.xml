@@ -10,7 +10,7 @@
     <tstamp/>
     <!-- Create the build directory structure used by compile -->
     <mkdir dir="${build}"/>
-<mkdir src="${src}"/>
+<mkdir dir="${src}"/>
   </target>
   
   <target name="move" depends = "init">
