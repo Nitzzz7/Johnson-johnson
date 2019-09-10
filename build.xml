@@ -14,7 +14,7 @@
   </target>
   
   <target name="move" depends = "init">
-<move file="*.java" todir="${src}" />
+<move file="Hello.java" todir="${src}" />
 </target>
  
   <target name="compile" depends="init" description="compile the source">
