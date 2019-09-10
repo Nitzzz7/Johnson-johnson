@@ -12,12 +12,12 @@
     <mkdir dir="${build}"/>
 <mkdir dir="${src}"/>
   </target>
- <target name="move" dependes="init">
+ <target name="move" depends="init">
 <mv *.java ${src}>
 </target>
   <target name="compile" depends="init"
         description="compile the source">
     <!-- Compile the Java code from ${src} into ${build} -->
-    <javac srcdir="${src}" de:stdir="${build}"/>
+    <javac srcdir="${src}" destdir="${build}"/>
   </target>
 </project>
