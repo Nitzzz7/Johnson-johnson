@@ -1,0 +1,26 @@
+pipeline{
+agent any{
+stages{	
+stage('Build'){
+steps{
+echo "Build Step"
+sh 'ant -version'
+}
+}    
+stage('Test'){
+steps{
+echo "Test Step"
+}
+}
+stage('Artifact upload'){
+steps{
+echo "Upload Artifacts"
+}
+}
+stage('Deploy'){
+steps{
+echo "Deploy code on dev environment"}
+}
+}
+}
+}
